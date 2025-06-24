@@ -190,6 +190,11 @@ nav .logo {
     color: #007BFF;
 }
 
+.skill-category li[data-progress]:hover::before {
+    width: attr(data-progress "%"); /* Set width based on data-progress */
+}
+
+
 /* Projects Section */
 #projects {
     padding: 6rem 2rem;
@@ -361,10 +366,12 @@ footer {
     margin-bottom: 1rem;
 }
 .skill-category li {
+    color: #007BFF;
+    margin-left: 25px;
     display: flex;
     align-items: center;
 }
-.skill-category li::after {
+/*.skill-category li::after {
     content: '';
     flex-grow: 1;
     height: 8px;
@@ -372,7 +379,7 @@ footer {
     border-radius: 4px;
     margin-left: 10px;
     max-width: 100px;
-}
+}*/
 #home {
     background: linear-gradient(rgba(0, 123, 255, 0.8), rgba(255, 149, 0, 0.8)), url('background.jpg') no-repeat center/cover;
 }
@@ -387,3 +394,13 @@ footer {
 .name{
     color: #FF9500;
 }
+/*.skill-category li::after {
+    content: '';
+    flex-grow: 1;
+    height: 8px;
+    background: #007BFF;
+    border-radius: 4px;
+    margin-left: 10px;
+    width: calc(attr(data-progress) * 1% * 1.2); /* Adjust multiplier to fit within container 
+    max-width: 120px; /* Increased max-width for better visibility 
+}*/
